@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "sans-serif";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.panel1 {
+    background-color: aqua;
+}
+
+.panel2 {
+    background-color: #ac3131;
+}
+
+.panel3 {
+    background-color: seagreen;
+}
+
+.panel4 {
+    background-color: saddlebrown;
+}
+
+.panel5 {
+    background-color: hotpink;
+}
+
+.container {
+    display: flex;
+    width: 90vh;
+    flex-direction: row;
+}
+
+
+.panel {
+    background-size: auto 100%;
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    height: 80vh;
+    border-radius: 50px;
+    flex: 0.5;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-family: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    opacity: 1;
+    flex: 5;
+}
