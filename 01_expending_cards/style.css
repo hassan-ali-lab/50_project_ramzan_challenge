@@ -56,7 +56,6 @@ body {
 }
 
 .panel h3{
-    font-family: 24px;
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -67,4 +66,16 @@ body {
 .panel.active {
     opacity: 1;
     flex: 5;
+}
+
+
+@media (max-width: 600px) {
+    .container{
+        width: 100vh;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
 }

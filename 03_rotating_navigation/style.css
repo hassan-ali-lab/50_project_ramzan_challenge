@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=lato&display=swap'); /* import font */
+
+
+* {
+    margin: 0; /* remove default margin */
+    padding: 0; /* remove default padding */
+    box-sizing: border-box; /* make padding and margin included in width and height */
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* import font */
+    overflow-x: hidden; /* remove horizontal scroll bar */
+    background-color: #333; /* set background color */
+    color: #222; /* set text color */
+    margin: 0; /* remove default margin */
+}
+
+.container {
+    background-color: #fafafa; /* set background color */
+    transform-origin: top left; /* set origin of rotation */
+    transition: transform 0.5s linear; /* set transition for rotation */
+    width: 100vw; /* set width to 100% of viewport */
+    min-height: 100vh; /* set height to 100% of viewport */
+    padding: 50px; /* set padding */
+}
+
+.container.show-nav { /* set style for container when show-nav class is added */
+    transform: rotate(-20deg); /* rotate container */
+}
+
+
+.circle-container { /* set position of circle */
+    position: fixed; /* set position to fixed */
+    top: -100px; /* set top position */
+    left: -100px; /* set left position */
+
+}
+
+.circle { /* set style for circle */
+    background-color: #ff7879; /* set background color */
+    height: 200px; /* set height */
+    width: 200px; /* set width */
+    border-radius: 50%; /* set border radius to 50% to make circle */
+    position: relative; /* set position to relative */
+    transition: transform 0.5s linear; /* set transition for rotation */
+}
+
+.container.show-nav .circle { /* set style for circle when show-nav class is added */
+    transform: rotate(-70deg); /* rotate circle */
+}
+
+.circle button { /* set style for button */
+    position: absolute; /* set position to absolute */
+    top: 45%; /* set top position */
+    left: 65%; /* set left position */
+    height: 100px; /* set height */
+    background: transparent; /* set background to transparent */
+    border: 0; /* remove border */
+    font-size: 26px; /* set font size */
+    color: #fafafa; /* set text color */
+}
+
+.circle button:focus { /* set style for button when focused */
+    outline: none; /* remove outline */
+}
+
+.circle button#closed { /* set style for button with id closed */
+    top: 60%; /* set top position */
+    transform: rotate(90deg); /* rotate button */
+    transform-origin: top left; /* set origin of rotation */
+}
+
+.container.show-nav + nav li { /* set style for li when show-nav class is added */
+    transform: translateX(0); /* set transform to 0 */
+    transition-delay: 0.5s; /* set delay for transition */
+}
+
+nav { /* set style for nav */
+    position: fixed; /* set position to fixed */
+    bottom: 40px; /* set bottom position */
+    left: 0; /* set left position */
+    z-index: 100; /* set z-index */
+}
+
+
+nav ul { /* set style for ul */
+    list-style-type: none; /* remove list style */
+    padding-left: 40px; /* set padding */
+
+}
+
+nav ul li { /* set style for li */
+    text-transform: uppercase; /* set text to uppercase */
+    color: #fafafa; /* set text color */
+    margin: 40px 0; /* set margin */
+    transform: translateX(-100%); /* set transform to -100% */
+    transition: transform 0.5s linear; /* set transition for transform */
+}
+
+nav ul li i { /* set style for icon */
+    font-size: 20px; /* set font size */
+    margin-right: 10px; /* set margin */
+}
+
+nav ul li + li { /* set style for li after first li */
+    margin-left: 15px; /* set margin */
+    transform: translateX(-150%); /* set transform to -150% */
+}
+
+nav ul li + li + li { /* set style for li after second li */
+    margin-left: 30px; /* set margin */
+    transform: translateX(-200%); /* set transform to -200% */
+}
+
+.content img { /* set style for image */
+    max-width: 100%; /* set max-width to 100% */
+}
+
+
+.content { /* set style for content */
+    max-width: 1000px; /* set max-width */
+    margin: 50px auto; /* set margin */
+    /*padding: 50px;*/
+}
+
+.content h1 { /* set style for h1 */
+    margin: 0; /* set margin */
+}
+
+.content small { /* set style for small */
+    color: #555; /* set text color */
+    font-style: italic; /* set font style to italic */
+}
+
+.content p { /* set style for p */
+    color: #333; /* set text color */
+    line-height: 1.5; /* set line height */
+}

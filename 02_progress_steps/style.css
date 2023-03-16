@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+
+/* Path: 02_progress_steps\style.css */
+
+* {
+    margin: 0; /* remove the margin */
+    padding: 0; /* remove the padding */
+    box-sizing: border-box; /* set the box-sizing to border-box */
+}
+
+body {
+    font-family: 'Muli', sans-serif; /* font family */
+    background-color: #f5f5f5; /* light grey */
+    display: flex; /* flexbox */
+    align-items: center; /* center the content */
+    justify-content: center; /* center the content */
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden; /* hide the scroll bar */
+    margin: 0; /* remove the margin */
+}
+
+.container {
+    text-align: center; /* center the text */
+}
+
+.progress-container {
+    display: flex; /* flexbox */
+    justify-content: space-between; /* space between the circles */
+    position: relative; /* position the circles */
+    margin-bottom: 30px; /* space between the circles and the text */
+    max-width: 100%; /* max width of the container */
+    width: 350px; /* width of the container */
+}
+
+.progress-container::before {
+    background-color: #ccc; /* light grey */
+    content: ''; /* content */
+    position: absolute; /* position */
+    top: 50%; /* top */
+    left: 0; /* left */
+    /*transform: translateY(-50%); !* transform *!*/
+    transform: translateX(5%); /* transform */
+    width: 95%; /* width */
+    z-index: -1; /* z-index */
+    height: 2px; /* height */
+    /*transition: 0.4s ease; !* transition *!*/
+}
+
+.progress {
+    background-color: #544e8c; /* purple */
+    content: ''; /* content */
+    position: absolute; /* position */
+    top: 50%; /* top */
+    left: 0; /* left */
+    /*transform: translateY(-50%); !* transform *!*/
+    transform: translateX(5%); /* transform */
+    width: 0%; /* width */
+    height: 2px; /* height */
+    z-index: -1; /* z-index */
+    transition: 0.4s ease; /* transition */
+}
+
+.circle{
+    background-color: white;
+    color: gray; /* gray */
+    border-radius: 50%; /* circle */
+    border: 2px solid #968b8b; /* light grey */
+    height: 30px; /* height */
+    width: 30px; /* width */
+    display: flex; /* flexbox */
+    align-items: center; /* center the content */
+    justify-content: center; /* center the content */
+    transition: 0.4s ease; /* transition */
+
+}
+
+.circle.active {
+    background-color: #544e8c; /* purple */
+    color: white; /* white */
+    border: 2px solid #544e8c; /* purple */
+}
+
+.btn{
+    background-color: #544e8c; /* purple */
+    color: white; /* white */
+    border: 0; /* remove the border */
+    border-radius: 6px; /* border radius */
+    padding: 10px 30px; /* padding */
+    margin: 5px; /* margin */
+    font-size: 16px; /* font size */
+}
+
+.btn:active{
+    transform: scale(0.98); /* transform */
+}
+
+.btn:focus{
+    outline: 0; /* remove the outline */
+}
+
+.btn:disabled{
+    background-color: #ccc; /* light grey */
+    color: #888888; /* light grey */
+    cursor: not-allowed; /* cursor */
+}
