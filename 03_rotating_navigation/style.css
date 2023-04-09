@@ -11,8 +11,12 @@ body {
     font-family: 'Lato', sans-serif; /* import font */
     overflow-x: hidden; /* remove horizontal scroll bar */
     background-color: #333; /* set background color */
-    color: #222; /* set text color */
-    margin: 0; /* remove default margin */
+    color: #0c0b0b; /* set text color */
+}
+
+a{
+    text-decoration: none; /* remove underline from links */
+    color: white; /* set text color */
 }
 
 .container {
